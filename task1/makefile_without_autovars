@@ -1,0 +1,17 @@
+obj := main.o src1.o src2.o
+
+all: $(obj)
+	gcc $(obj) -o task
+
+main.o:
+	gcc -c main.c
+
+src1.o:
+	gcc -c src1.c
+
+src2.o:
+	gcc -c src2.c
+
+clean:
+	rm -f $(obj) task
+
